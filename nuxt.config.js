@@ -31,7 +31,7 @@ export default {
                 name: 'profile',
                 component: resolve(__dirname, 'pages/profile/index.vue'),
               },
-              
+
               {
                 path: '/settings',
                 name: 'settings',
@@ -47,10 +47,13 @@ export default {
                 name: 'article',
                 component: resolve(__dirname, 'pages/article/index.vue'),
               },
-            ], 
+            ],
           },
         ]
       );
     },
+    // modules: ['cookie-universal-nuxt', '@nuxtjs/axios'],
+    // //添加插件引用
+    // plugins: ['@/plugins/axios'],
   },
 };
