@@ -53,6 +53,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name:'SettingIndex',
+  middleware: 'authenticated',
+};
 </script>
 <style lang=""></style>

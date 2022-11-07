@@ -52,8 +52,12 @@ export default {
         ]
       );
     },
-    // modules: ['cookie-universal-nuxt', '@nuxtjs/axios'],
-    // //添加插件引用
-    // plugins: ['@/plugins/axios'],
+  },
+
+  // buildModules: ['@nuxtjs/composition-api'],
+  modules: ['@nuxtjs/axios'],
+  plugins: ['./plugins/api.js'],
+  axios: {
+    baseURL: 'https://conduit.productionready.io/api',
   },
 };

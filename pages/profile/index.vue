@@ -82,7 +82,8 @@
 </template>
 <script>
 export default {
-  name:'UserProfile'
+  name: 'UserProfile',
+  middleware: 'authenticated',
 };
 </script>
 <style lang=""></style>

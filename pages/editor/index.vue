@@ -49,7 +49,8 @@
 </template>
 <script>
 export default {
-  name:'EditIndex'
+  name: 'EditIndex',
+  middleware: 'authenticated',
 };
 </script>
 <style lang=""></style>
