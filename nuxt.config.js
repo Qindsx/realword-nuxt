@@ -56,7 +56,7 @@ export default {
 
   // buildModules: ['@nuxtjs/composition-api'],
   modules: ['@nuxtjs/axios'],
-  plugins: ['./plugins/api.js'],
+  plugins: ['./plugins/api.js', '~/plugins/dayjs.js'],
   axios: {
     baseURL: 'https://conduit.productionready.io/api',
   },

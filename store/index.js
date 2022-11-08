@@ -10,9 +10,7 @@ export const state = () => {
 
 export const mutations = {
   setUser(state, data) {
-    console.log(data, 'state');
     state.user = data;
-    console.log(state.user, 'state.user');
   },
 };
 
@@ -24,12 +22,10 @@ export const actions = {
       const parsed = cookieparser.parse(req.headers.cookie);
       try {
         user = JSON.parse(parsed.user);
-        console.log(user, 'user');
       } catch (err) {
         // No valid cookie found
       }
     }
     commit('setUser', user);
-    console.log(state.user, 'state');
   },
 };

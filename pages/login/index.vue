@@ -79,18 +79,15 @@ export default {
   methods: {
     async handleSumbit() {
       try {
-        // console.log(this.user);
         const res = this.isLogin
           ? await this.$api.user.authLoagin({ user: this.user })
           : await this.$api.user.authRegister({ user: this.user });
-        // console.log(res);
 
         //保存用户的登录状态
         this.$store.commit('setUser', res.user);
 
         // 使用cookie来进行持久化
         Cookie.set('user', JSON.stringify(res.user));
-        console.log(this.$store.state.user);
 
         this.$router.push('/');
       } catch (err) {
