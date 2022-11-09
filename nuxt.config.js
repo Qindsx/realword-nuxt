@@ -54,6 +54,11 @@ export default {
     },
   },
 
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
+
   // buildModules: ['@nuxtjs/composition-api'],
   modules: ['@nuxtjs/axios'],
   plugins: ['./plugins/api.js', '~/plugins/dayjs.js'],
