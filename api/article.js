@@ -29,6 +29,18 @@ export default ($axios) => ({
       },
     });
   },
+
+  // 获取文章详情
+  getArticle(slug) {
+    return $axios.$get(`/articles/${slug}`);
+  },
+
+  // 获取文章评论
+  getArticleComments(slug){
+    return $axios.$get(`/articles/${slug}/comments`);
+
+  },
+
   // 添加点赞
   addFavorite(slug) {
     return $axios.$post(`/articles/${slug}/favorite`);
